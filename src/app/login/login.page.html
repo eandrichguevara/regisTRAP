@@ -1,0 +1,12 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Iniciar Sesión</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-input placeholder="Usuario"></ion-input>
+  <ion-input placeholder="Contraseña"></ion-input>
+  <ion-button (click)="loginUser()">INGRESAR</ion-button>
+  <a [routerLink]="['/password-recovery']">Recuperar contraseña</a>
+</ion-content>
