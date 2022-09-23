@@ -5,8 +5,10 @@
 </ion-header>
 
 <ion-content>
-  <ion-input placeholder="Usuario"></ion-input>
-  <ion-input placeholder="Contraseña"></ion-input>
-  <ion-button (click)="loginUser()">INGRESAR</ion-button>
+  <form>
+    <ion-input placeholder="Usuario" [(ngModel)]="user.username" name="username" required></ion-input>
+    <ion-input placeholder="Contraseña" [(ngModel)]="user.password" name="password" required></ion-input>
+    <ion-button type="submit" [routerLink]="['/home', user.username]">INGRESAR</ion-button>
+  </form>
   <a [routerLink]="['/password-recovery']">Recuperar contraseña</a>
 </ion-content>

@@ -9,11 +9,17 @@ export class LoginPage implements OnInit {
 
   constructor() { }
 
+  user = {
+    username: '',
+    password: ''
+  }
+
   ngOnInit() {
   }
 
-  loginUser(){
-    console.log("LOGIN EVENT");
+  onSubmit(){
+    console.log("USER: "+this.user.username);
+    console.log("PASS: "+this.user.password);
   }
 
 }
